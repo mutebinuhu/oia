@@ -1,5 +1,6 @@
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+export const dynamic = "force-dynamic";
 
 const mont = Montserrat({ subsets: ["latin"] });
 
