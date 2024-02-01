@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
@@ -7,12 +7,16 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 
 
-const Header = () => {
+
+const Header = ({inquire}) => {
+
+    const [showInquire, setShowInquire] = useState(false)
+
   return (
     <header className="text-white border-b-2 border-gray-100 bg-[#006B8D] p-3">
       <div className="">
         <ul className="flex justify-between items-center">
-            <li className="border px-4 rounded py-3 hover:bg-[#3288a3] "><a href="#contact">INQUIRE + </a></li>
+            <li className="border px-4 rounded py-3 hover:bg-[#3288a3] " onClick={()=>setShowInquire(true)}><a href="#contact">INQUIRE + </a></li>
             <li> 
                 <Image src="/images/oia.png"
                         alt="Picture of the author"

@@ -25,7 +25,7 @@ const TextArea = ({ label, placeholder, value, onChange }) => {
 
        
 
-const Form = () => {
+const Form = ({showText, para, color}) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone:'' });
   const [errors, setErrors] = useState({ name: '', email: '',  phone:'' });
 
@@ -71,8 +71,9 @@ const Form = () => {
     transition={{ duration: 0.5 }}
     className=''
     >
-     <div className='text-md text-gray-500 mt-2 mx-2'>
-            <p>Unlock your dream home with exclusive listings, personalized alerts, and expert market insights <br/> – sign up now</p>
+     <div className='text-md text-gray-500 mt-2 mx-2 text-center'>
+        {showText &&  <p className={`${color}`}>{para}</p>
+}
         </div>
     <motion.form
       

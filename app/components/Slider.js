@@ -62,7 +62,7 @@ const Slider = () => {
 
   </div>
   <div className='w-full md:w-1/3 md:mx-4 h-full'>
-            <Form/>
+            <Form showText={true} para="Unlock your dream home with exclusive listings, personalized alerts, and expert market insights – sign up now "/>
             
         </div>
   </div>

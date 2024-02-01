@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 const ExploreComponent = ({name}) =>{
     return(
@@ -10,8 +11,14 @@ const ExploreComponent = ({name}) =>{
 const Explore = () => {
     return (
         <div className='flex justify-between space-x-4 '>
-            <ExploreComponent name=" Explore Saadiyat Logoons"/>
+            <Link href="/sadiyat-lagoons">
+            <ExploreComponent name=" Explore  sadiyat-lagoons"/>
+            
+            </Link>
+            <Link href="/yas-golf-collection">
             <ExploreComponent name="  Explore Yas golf Collection"/>
+
+            </Link>
 
         
         </div>
